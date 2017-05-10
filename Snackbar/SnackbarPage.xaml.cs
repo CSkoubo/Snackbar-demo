@@ -13,12 +13,12 @@ namespace Snackbar
 
 		void Handle_Clicked(object sender, System.EventArgs e)
 		{
-			userNotificationService.Notify("Magic snack!!", 10000, "Puff!", obj => { });
+			userNotificationService.Snack("Magic snack!!", 10000, "Puff!");
 		}
 
         private void Button_Clicked(object sender, System.EventArgs e)
         {
-            userNotificationService.Notify("Default notify without action");
+            userNotificationService.Snack("Default notify without action");
         }
     }
 }
