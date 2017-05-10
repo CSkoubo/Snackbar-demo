@@ -7,12 +7,14 @@ namespace Snackbar.Droid
 {
 	public class UserNotificationService : IUserNotificationService
 	{
-		public void Notify(string message, int duration, string actionText, Action<object> action)
+		public void Notify(string message, int duration, string actionText = null, Action<object> action = null)
 		{
-			var contentView = ((Activity)Forms.Context).FindViewById(Android.Resource.Id.Content);
+			var contentView = (Forms.Context as Activity)?.FindViewById(Android.Resource.Id.Content);
 			var snackbar = Android.Support.Design.Widget.Snackbar.Make(contentView, message, duration);
+
 			if (actionText != null && action != null)
 				snackbar.SetAction(actionText, action);
+
 			snackbar.Show();
 		}
 	}

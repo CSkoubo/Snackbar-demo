@@ -10,5 +10,6 @@
 			VerticalOptions  ="Center"
 			HorizontalOptions="Center" />
 			<Button Text="Magic button!" Clicked="Handle_Clicked"/>
+        <Button Text="duration = 2000" Clicked="Button_Clicked"/>
 	</StackLayout>
 </ContentPage>
